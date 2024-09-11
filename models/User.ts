@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
   role: { type: String, default: "user" },
   image: { type: String },
   authProviderId: { type: String },
+  emailVerified: {type: Date}
 });
 
 export const User = mongoose.models?.User || mongoose.model("User", userSchema);

@@ -137,6 +137,7 @@ import { redirect } from "next/navigation";
 import { getSession } from "@/lib/getSession";
 import Form from "@/components/shared/Form";
 import { SignInGoogle } from "@/components/shared/auth/sign-in-goole";
+import { SignInResend } from "@/components/shared/auth/sign-in-resend";
 
 const Login = async () => {
 
@@ -151,6 +152,7 @@ const Login = async () => {
     <div className="mt-10 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white border border-[#121212]  dark:bg-black">
       <Form/>
       <SignInGoogle/>
+      <SignInResend/>
     </div>
   );
 };
