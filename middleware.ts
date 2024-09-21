@@ -67,10 +67,6 @@
 import { auth } from "@/auth";
 import { NextRequest, NextResponse } from 'next/server';
 
-export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
-}
-
 // export default auth((request) => {
 //   const token = request.auth;
 //   const url = request.nextUrl;
@@ -135,4 +131,9 @@ export function middleware(req: NextRequest) {
 
   return NextResponse.next();
 
+}
+
+
+export const config = {
+  matcher: ["/auth/signin", '/auth/register', '/', '/page1','/page2' ],
 }
