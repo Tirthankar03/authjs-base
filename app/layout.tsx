@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { SessionProvider } from "next-auth/react";
 import { Toaster } from "sonner";
+import { ReactNode, Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <Navbar />
+          <Suspense fallback={null}>
           {children}
+          </Suspense>
           <Toaster richColors={true}/>
         </body>
       </html>
