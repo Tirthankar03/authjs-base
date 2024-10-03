@@ -1,8 +1,13 @@
 "use client";
-import { useSession } from "next-auth/react";
+
+import { useSessionDataData } from "@/lib/useSessionData";
+
 
 export default function Page1() {
-  const { data: session, update } = useSession();
+  const { data: session, update } = useSessionDataData();
+
+  console.log("page1 session>>>>>>>", session);
+  
   return (
     <>
       <button

@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import { SessionProvider } from "next-auth/react";
 import { Toaster } from "sonner";
 import { ReactNode, Suspense } from "react";
-
+import { SessionDataProvider } from '@/components/wrapper/SessionDataWrapper'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SessionProvider>
+<SessionDataProvider>
       <html lang="en">
         <body className={inter.className}>
           <Navbar />
@@ -29,6 +29,6 @@ export default function RootLayout({
           <Toaster richColors={true}/>
         </body>
       </html>
-    </SessionProvider>
+      </SessionDataProvider>
   );
 }

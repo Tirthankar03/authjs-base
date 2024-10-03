@@ -4,14 +4,14 @@
 // import { Button } from "@/components/ui/button";
 // import { auth } from "@/auth";
 // import { handleSignOut } from "@/action/authActions";
-// import { useSession } from "next-auth/react";
+// import { useSessionData } from "next-auth/react";
 
 // export default async function Navbar() {
 //   //server
 //   // const session = await auth();
 
 //   //client
-//   // const { data: session } = useSession();
+//   // const { data: session } = useSessionData();
 
 //   // console.log({session});
 //   return (
@@ -37,14 +37,14 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useSession } from "next-auth/react";
 import { handleSignOut } from "@/action/authActions";
+import { useSessionDataData } from "@/lib/useSessionData";
 export default function Navbar() {
   //   //server
 //   // const session = await auth();
 
 //client
-  const { data: session } = useSession();
+  const { data: session } = useSessionDataData();
 
   return (
     <nav className="flex justify-between items-center py-3 px-4 bg-white shadow-md">
