@@ -46,6 +46,9 @@ export default function Navbar() {
 //client
   const { data: session } = useSession();
 
+  console.log("session in navbar>>>>>>>", session);
+  
+
   return (
     <nav className="flex justify-between items-center py-3 px-4 bg-white shadow-md">
       <Link href="/" className="text-xl font-bold">

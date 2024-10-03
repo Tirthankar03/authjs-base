@@ -9,6 +9,9 @@ const userSchema = new mongoose.Schema({
   role: { type: String, default: "user" },
   image: { type: String },
   authProviderId: { type: String },
+  creator: { type: String },
+  isCreator: { type: Boolean },
+  
 });
 
 export const User = mongoose.models?.User || mongoose.model("User", userSchema);
